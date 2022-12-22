@@ -14,7 +14,7 @@ public class Main extends Application {
 	public void start(Stage primaryStage) {
 		try {
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Play.fxml"));
-			Scene scene = new Scene(root,Color.DARKGOLDENROD);
+			Scene scene = new Scene(root,Color.VIOLET);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			Image somemaths = new Image("somemaths.jpg");
 			primaryStage.getIcons().add(somemaths); 

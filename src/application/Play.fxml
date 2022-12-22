@@ -5,16 +5,17 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NumberController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.PlayController">
    <children>
-      <Button layoutX="253.0" layoutY="211.0" mnemonicParsing="false" onAction="#switchToNumberGame" text="Play Game">
+      <Button layoutX="253.0" layoutY="212.0" mnemonicParsing="false" onAction="#switchToNumberGame" text="Play Game">
          <font>
             <Font size="24.0" />
          </font></Button>
-      <Label layoutX="64.0" layoutY="80.0" text="This is the number game">
+      <Label fx:id="numberGameLabel" layoutY="80.0" prefHeight="70.0" prefWidth="650.0" text="This is the number game">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
+      <Label fx:id="lastScoreLabel" layoutX="1.0" layoutY="344.0" prefHeight="18.0" prefWidth="650.0" text="Last score: " />
    </children>
 </AnchorPane>
