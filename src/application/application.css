@@ -16,8 +16,12 @@
 		-fx-text-fill:"white";
 }
 
+.textfield {
+	-fx-background-color:magenta; 
+}
+
 .root {
-	-fx-background-color:"grey";
+	-fx-background-color:#9dc4a1; /* med bidrag från Max */
 }
 
 .label {
