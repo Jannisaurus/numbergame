@@ -26,17 +26,18 @@ public class NumberController {
 	@FXML
 	TextField textFieldNumberInput;
 	
-	TheGame game = new TheGame(); 
+	private TheGame game = new TheGame(); 
+	private ScoreBoard scoreBoard = new ScoreBoard(); 
 	
 	PauseTransition visiblePause = new PauseTransition(
 	        Duration.seconds(1)
 	);
 	
 	
-	private void change() {
-		labelNumberOutput.setVisible(false);
-		textFieldNumberInput.setVisible(true);
-	}
+//	private void change() {
+//		labelNumberOutput.setVisible(false);
+//		textFieldNumberInput.setVisible(true);
+//	}
 	
 	public void initialize() {
 		labelNumberOutput.setText(String.valueOf(game.generateNumber()));
@@ -46,6 +47,7 @@ public class NumberController {
 		        event ->  {
 		        	labelNumberOutput.setVisible(false);
 			        textFieldNumberInput.setVisible(true);
+			        textFieldNumberInput.requestFocus();
 		        }
 		);
 		
@@ -72,11 +74,9 @@ public class NumberController {
 		
 		labelNumberOutput.setText(String.valueOf(game.generateNumber()));
 		
-		textFieldNumberInput.clear();
+		textFieldNumberInput.clear(); 
 		
-		int tot = game.getTot(); 
-		
-		if (tot <= 10) {
+		if (game.getTot() <= 2) {
 			labelNumberOutput.setVisible(true);
 			textFieldNumberInput.setVisible(false);
 			
@@ -86,15 +86,17 @@ public class NumberController {
 			        iAmNothing ->  {
 			        	labelNumberOutput.setVisible(false);
 				        textFieldNumberInput.setVisible(true);
+				        textFieldNumberInput.requestFocus();
 			        }
 			);
 			
 			visiblePause.play();
+			
 		} else {
 			System.out.println(game.getScore());
 			
-			game.setScore(0);
-			
+			scoreBoard.addToFile(game.getScore());
+		
 			AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("Play.fxml"));
 			stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 			scene = new Scene(root);
@@ -102,8 +104,7 @@ public class NumberController {
 			stage.setScene(scene);
 			stage.show();
 		}
-		
-	
+
 	}
 	
 }

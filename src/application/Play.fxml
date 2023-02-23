@@ -16,6 +16,7 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="lastScoreLabel" layoutX="1.0" layoutY="344.0" prefHeight="18.0" prefWidth="650.0" text="Last score: " />
+      <Label fx:id="lastScoreLabel" layoutX="1.0" layoutY="336.0" prefHeight="18.0" prefWidth="650.0" text="Last score: " />
+      <Button layoutX="275.0" layoutY="396.0" mnemonicParsing="false" onAction="#button_clearHighScore" text="Clear high score" />
    </children>
 </AnchorPane>

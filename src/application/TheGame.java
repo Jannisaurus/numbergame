@@ -39,7 +39,7 @@ public class TheGame {
 	
  	public int generateNumber() {
  	 	
- 		localRandom = ThreadLocalRandom.current().nextInt(100000,999999);
+ 		localRandom = ThreadLocalRandom.current().nextInt(1000,9999);
  	 	tot++; 
 
  		return localRandom;

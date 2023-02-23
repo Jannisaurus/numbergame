@@ -11,16 +11,23 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
-public class PlayController {
+public class PlayController{
 	private Stage stage; 
 	private Scene scene; 
 	private Parent root; 
 	
-	@FXML
-	Label lastScoreLabel;
+	private ScoreBoard scoreBoard = new ScoreBoard();
+//    public PlayController(ScoreBoard scoreBoard) {
+//        this.scoreBoard = scoreBoard;
+//    }
 	
-	public void initialize() {
-//		lastScoreLabel.setText(null);
+	@FXML
+	private Label lastScoreLabel;
+	
+	public void initialize() throws IOException {
+		
+		lastScoreLabel.setText("High score: " + Integer.toString(scoreBoard.getHighScore()));
+
 	}
 	
 	public void switchToNumberGame(ActionEvent event) throws IOException {
@@ -30,6 +37,11 @@ public class PlayController {
 		scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 		stage.setScene(scene);
 		stage.show();
+	}
+	
+	public void button_clearHighScore(ActionEvent event) throws IOException {
+		scoreBoard.clearScoreBoard();
+		lastScoreLabel.setText("High score: " + 0);
 	}
 	
 }

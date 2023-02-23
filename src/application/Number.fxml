@@ -8,12 +8,12 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.NumberController">
    <children>
+      <TextField fx:id="textFieldNumberInput" layoutX="-1.0" layoutY="148.0" prefHeight="26.0" prefWidth="650.0" />
       <Button layoutX="276.0" layoutY="284.0" mnemonicParsing="false" onAction="#switchToPlayScreen" prefHeight="40.0" prefWidth="100.0" text="Play">
          <font>
             <Font size="18.0" />
          </font></Button>
-      <TextField fx:id="textFieldNumberInput" layoutX="251.0" layoutY="179.0" />
-      <Label fx:id="labelNumberOutput" layoutY="112.0" prefHeight="18.0" prefWidth="650.0" text="Label" />
+      <Label fx:id="labelNumberOutput" layoutY="148.0" prefHeight="26.0" prefWidth="650.0" text="Label" />
       <Button layoutX="275.0" layoutY="218.0" mnemonicParsing="false" onAction="#button_numberSubmitAnswer" prefHeight="40.0" prefWidth="100.0" text="Submit">
          <font>
             <Font size="18.0" />

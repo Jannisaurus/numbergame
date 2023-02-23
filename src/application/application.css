@@ -16,12 +16,14 @@
 		-fx-text-fill:"white";
 }
 
-.textfield {
-	-fx-background-color:magenta; 
+.text-field {
+	-fx-background-color:none;
+	-fx-alignment:center; 
+	-fx-font-size:30px; 
 }
 
 .root {
-	-fx-background-color:#9dc4a1; /* med bidrag från Max */
+	-fx-background-color:#9dc4a1; 
 }
 
 .label {
